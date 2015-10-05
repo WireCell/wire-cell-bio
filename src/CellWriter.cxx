@@ -57,14 +57,5 @@ bool CellWriter::insert(const ICell::shared_vector& cells)
 	fstr << "],\n";
     }
     
-    // fixme: need to get charge in here!
-    string comma = "";
-    fstr << "\"q\":[";
-    for (auto cell : *cells) {
-	fstr << comma << "1";
-	comma = ",";
-    }
-    fstr << "],\n";
-    
 
 }
