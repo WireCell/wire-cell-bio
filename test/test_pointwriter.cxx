@@ -33,7 +33,7 @@ int main(int argc, char *argv[]) {
 	    Vector point = origin + s*dir;
 	    points->push_back(point);
 	}
-	PointFieldWriter::input_type in(points);
+	PointFieldWriter::input_pointer in(points);
 	Assert(pfw.insert(in));
 
 	auto zerodir = outdir / "0";

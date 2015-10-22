@@ -29,7 +29,7 @@ PointFieldWriter::~PointFieldWriter()
 {
 }
 
-bool PointFieldWriter::insert(const input_type& points)
+bool PointFieldWriter::insert(const input_pointer& points)
 {
     path dpath = m_dir / std::to_string(m_count);
 

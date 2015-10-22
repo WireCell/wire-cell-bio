@@ -34,7 +34,7 @@ int main(int argc, char *argv[]) {
 	    double scalar = s/units::cm;
 	    field->push_back(ScalarPoint(scalar, point));
 	}
-	ScalarFieldWriter::input_type in(field);
+	ScalarFieldWriter::input_pointer in(field);
 	Assert(sfw.insert(in));
 
 	auto zerodir = outdir / "0";
