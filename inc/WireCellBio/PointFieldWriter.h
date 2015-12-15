@@ -25,7 +25,7 @@ namespace WireCellBio {
 		   int run = 0, int subrun = 0, 
 		   const char* data_directory_name = "./data");
 	virtual ~PointFieldWriter();
-	virtual bool insert(const input_pointer& points);
+	virtual bool operator()(const input_pointer& points);
 
     private:
 

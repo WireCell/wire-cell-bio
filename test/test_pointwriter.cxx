@@ -34,7 +34,7 @@ int main(int argc, char *argv[]) {
 	    points->push_back(point);
 	}
 	PointFieldWriter::input_pointer in(points);
-	Assert(pfw.insert(in));
+	Assert(pfw(in));
 
 	auto zerodir = outdir / "0";
 	Assert(exists(zerodir.c_str()));

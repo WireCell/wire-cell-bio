@@ -29,7 +29,7 @@ ScalarFieldWriter::~ScalarFieldWriter()
 {
 }
 
-bool ScalarFieldWriter::insert(const input_pointer& field)
+bool ScalarFieldWriter::operator()(const input_pointer& field)
 {
     path dpath = m_dir / std::to_string(m_count);
 

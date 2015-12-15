@@ -35,7 +35,7 @@ int main(int argc, char *argv[]) {
 	    field->push_back(ScalarPoint(scalar, point));
 	}
 	ScalarFieldWriter::input_pointer in(field);
-	Assert(sfw.insert(in));
+	Assert(sfw(in));
 
 	auto zerodir = outdir / "0";
 	Assert(exists(zerodir.c_str()));
