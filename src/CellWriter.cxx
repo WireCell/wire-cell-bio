@@ -43,7 +43,7 @@ bool CellWriter::insert(const ICell::shared_vector& cells)
     ss << "/" << m_count << "-" << m_name << ".json";
     string fname = ss.str();
 
-    ofstream fstr(fname.c_str());
+    std::ofstream fstr(fname.c_str());
     fstr << "{\n" << m_boiler << "\"eventNo\":\"" << m_count << "\",\n";
 
     string xyz = "xyz";

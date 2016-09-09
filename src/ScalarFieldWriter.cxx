@@ -42,7 +42,7 @@ bool ScalarFieldWriter::operator()(const input_pointer& field)
     string fname = std::to_string(m_count) + "-" + m_name + ".json";
     path fpath = dpath / fname;
 
-    ofstream fstr(fpath.c_str());
+    std::ofstream fstr(fpath.c_str());
     fstr << "{\n" << m_boiler;
     string xyz = "xyz";
     for (int ind = 0; ind<3; ++ind) {
